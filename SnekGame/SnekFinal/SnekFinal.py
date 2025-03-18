@@ -24,44 +24,44 @@ LIGHT_BLUE = (135,206,235)
 outline=0
 
 # loaded images and audio
-snek1 = pygame.image.load("../SnekImages/snek_snek1.png")
+snek1 = pygame.image.load("SnekImages/snek_snek1.png")
 snek1 = pygame.transform.scale(snek1,(400,400))
-snek2 = pygame.image.load("../SnekImages/snek_snek2.png")
+snek2 = pygame.image.load("SnekImages/snek_snek2.png")
 snek2 = pygame.transform.scale(snek2,(400,400))
-APPLE = pygame.image.load("../SnekImages/snek_apple.png")
+APPLE = pygame.image.load("SnekImages/snek_apple.png")
 smallApple = pygame.transform.scale(APPLE,(30,30))
 bigApple = pygame.transform.scale(APPLE,(80,80))
-hourglass = pygame.image.load("../SnekImages/snek_hourglass.png")
+hourglass = pygame.image.load("SnekImages/snek_hourglass.png")
 hourglass = pygame.transform.scale(hourglass,(90,90))
-clockImg = pygame.image.load("../SnekImages/snek_clock.png")
+clockImg = pygame.image.load("SnekImages/snek_clock.png")
 clockImg = pygame.transform.scale(clockImg,(150,150))
-trophy = pygame.image.load("../SnekImages/snek_trophy.png")
+trophy = pygame.image.load("SnekImages/snek_trophy.png")
 trophy = pygame.transform.scale(trophy,(90,90))
-FECES = pygame.image.load("../SnekImages/snek_obstacle.png")
+FECES = pygame.image.load("SnekImages/snek_obstacle.png")
 FECES = pygame.transform.scale(FECES,(40,40))
-leaf = pygame.image.load("../SnekImages/snek_leaf.png")
+leaf = pygame.image.load("SnekImages/snek_leaf.png")
 leaf = pygame.transform.scale(leaf,(35,35))
-night = pygame.image.load("../SnekImages/snek_night.png")
+night = pygame.image.load("SnekImages/snek_night.png")
 night = pygame.transform.scale(night,(550,330))
-sunday = pygame.image.load("../SnekImages/snek_sunday.png")
+sunday = pygame.image.load("SnekImages/snek_sunday.png")
 sunday = pygame.transform.scale(sunday,(550,330))
-feelBetter = pygame.image.load("../SnekImages/snek_sunday2.png")
+feelBetter = pygame.image.load("SnekImages/snek_sunday2.png")
 feelBetter = pygame.transform.scale(feelBetter,(550,330))
-timeskip = pygame.image.load("../SnekImages/snek_grownup.png")
+timeskip = pygame.image.load("SnekImages/snek_grownup.png")
 timeskip = pygame.transform.scale(timeskip,(550,330))
-coma = pygame.image.load("../SnekImages/snek_coma.png")
+coma = pygame.image.load("SnekImages/snek_coma.png")
 coma = pygame.transform.scale(coma,(550,330))
-finalForm = pygame.image.load("../SnekImages/snek_butterfly.png")
+finalForm = pygame.image.load("SnekImages/snek_butterfly.png")
 finalForm = pygame.transform.scale(finalForm,(550,330))
-NOM_SOUND = pygame.mixer.Sound("../SnekAudio/snek_nom.wav")
+NOM_SOUND = pygame.mixer.Sound("SnekAudio/snek_nom.wav")
 NOM_SOUND.set_volume(1)
-TIME_SOUND = pygame.mixer.Sound("../SnekAudio/snek_timeIncrease.wav")
+TIME_SOUND = pygame.mixer.Sound("SnekAudio/snek_timeIncrease.wav")
 TIME_SOUND.set_volume(1)
-OOF_SOUND = pygame.mixer.Sound("../SnekAudio/snek_oofDeath.wav")
+OOF_SOUND = pygame.mixer.Sound("SnekAudio/snek_oofDeath.wav")
 OOF_SOUND.set_volume(3)
-HIT_SOUND = pygame.mixer.Sound("../SnekAudio/snek_collisionDeath.wav")
+HIT_SOUND = pygame.mixer.Sound("SnekAudio/snek_collisionDeath.wav")
 HIT_SOUND.set_volume(3)
-WOW_SOUND = pygame.mixer.Sound("../SnekAudio/snek_victoryWow.wav")
+WOW_SOUND = pygame.mixer.Sound("SnekAudio/snek_victoryWow.wav")
 WOW_SOUND.set_volume(5)
 
 # fonts
@@ -266,12 +266,12 @@ def spawnObstacle():    # draw obstacles
 
 def playMusic(event_type):      # play the appropriate music
     global eventType
-    backgroundMusic = "../SnekAudio/snek_theme.wav"
+    backgroundMusic = "SnekAudio/snek_theme.wav"
     eventType = event_type
     if event_type == "dead":
-        backgroundMusic = "../SnekAudio/snek_gameOver_undertale.wav"
+        backgroundMusic = "SnekAudio/snek_gameOver_undertale.wav"
     elif event_type == "butterfly":
-        backgroundMusic = "../SnekAudio/snek_secretMusic_knb.wav"
+        backgroundMusic = "SnekAudio/snek_secretMusic_knb.wav"
     pygame.mixer.music.load(backgroundMusic)
     pygame.mixer.music.set_volume(1)
     pygame.mixer.music.play(loops = -1)
